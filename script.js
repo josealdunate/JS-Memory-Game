@@ -15,20 +15,20 @@ let randomSortedImages = [];
 
 //sound effects
 let sounds = {
-    flipSingle: new Audio('/sounds/flip-single.mp3'),
-    flipDouble: new Audio('/sounds/flip-double.mp3'),
-    levelCompleted: new Audio('/sounds/level-completed.wav'),
-    gameOver: new Audio('/sounds/game-over.wav'),
-    menuSelection: new Audio('/sounds/menu-select.mp3'),
-    match: new Audio('/sounds/match-found.mp3'),
-    mainTheme: new Audio('/sounds/main-theme.mp3')
+    flipSingle: new Audio('sounds/flip-single.mp3'),
+    flipDouble: new Audio('sounds/flip-double.mp3'),
+    levelCompleted: new Audio('sounds/level-completed.wav'),
+    gameOver: new Audio('sounds/game-over.wav'),
+    menuSelection: new Audio('sounds/menu-select.mp3'),
+    match: new Audio('sounds/match-found.mp3'),
+    mainTheme: new Audio('sounds/main-theme.mp3')
 }
 
 // Select all game Images
 function selectGameImages(num) {
     let images = [];
     for (let i = 0; i < num; i++) {
-        images.push(`/images/landscape${i}.jpg`);
+        images.push(`images/landscape${i}.jpg`);
     }
     return images;
 };
@@ -165,7 +165,7 @@ function displayBoard (totalCards) {
         let card = document.createElement("img");
         card.setAttribute("class", "card");
         card.setAttribute("id", i);
-        card.setAttribute("src", "/images/card-back.png");
+        card.setAttribute("src", "images/card-back.png");
         card.addEventListener("click", flipCard);
         
         cardContainer.appendChild(card);
@@ -211,7 +211,7 @@ function checkForMatch() {
     } else {
         flippedCards.forEach(element => {
             let card = document.getElementById(element.id);
-            card.setAttribute("src", "/images/card-back.png");
+            card.setAttribute("src", "images/card-back.png");
             card.classList.toggle("card-img");
             
         });
