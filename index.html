@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Memory Game</title>
+</head>
+<body>
+    <main>
+        <div id="game">
+            <div id="info">
+                <h1>Memory Game</h1>
+                <h2>Flips: <span id="flips"></span></h2>
+                <h2>Level: <span id="level"></span></h2>
+            </div>
+            <div id="canvas">
+                <div id="menu">
+                    <div class="menu-container">
+                        <button class="easy" onclick="selectDifficulty('easy')">Easy</button>
+                        <button class="medium" onclick="selectDifficulty('medium')">Medium</button>
+                        <button class="hard" onclick="selectDifficulty('hard')">Hard</button>
+                    </div>
+                </div>
+                <div id="gameBoard">
+                    <!-- cards will display here -->
+                </div>
+                <div id="messageContainer">
+                    <p id="message"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <small><a target="_blank" href="https://www.vecteezy.com/free-vector/landscape">Landscape Vectors by Vecteezy</a></small>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
